@@ -1561,10 +1561,7 @@
           <div class="browser-dot bd-green"></div>
           <div class="browser-url">emy · phase 03 · robot companion</div>
         </div>
-        <div class="placeholder-body">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="8" width="14" height="11" rx="2" stroke="currentColor" stroke-width="1.4"/><circle cx="9" cy="13" r="1.2" fill="currentColor"/><circle cx="15" cy="13" r="1.2" fill="currentColor"/><path d="M12 8V5m0 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM5 12H3m18 0h-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-          <div>Image coming soon</div>
-        </div>
+        <img src="https://res.cloudinary.com/dqfmlcbew/image/upload/v1783089637/ChatGPT_Image_Jul_3_2026_at_07_39_30_PM_nnpzmv.png" alt="EMY Phase 03 - Physical robot">
       </div>
       <div class="project-body">
         <div class="phase-badge">Emy · Phase 03</div>
@@ -2131,7 +2128,7 @@ const projects = {
     liveUrl: '#',
     ghUrl: 'https://github.com/alisubhani-6/EMY_BOT_PHASE_1',
     ghUrl2: 'https://github.com/alisubhani-6/EMY_BOT_PHASE_3',
-    img: '',
+    img: 'https://res.cloudinary.com/dqfmlcbew/image/upload/v1783089637/ChatGPT_Image_Jul_3_2026_at_07_39_30_PM_nnpzmv.png',
     desc: "Phase 3 takes Emy off the screen and into a physical robot companion built around an ESP32 microcontroller. An INMP441 I2S microphone handles on-device wake-word detection and voice activity detection, while a MAX98357A I2S amplifier drives speaker output. An SH1106 OLED display renders roughly a dozen named eye states to give Emy an expressive face, and two servo motors produce physical gestures synced to the conversation. Audio streams as raw PCM directly over TCP to a Python backend server, which handles transcription via Whisper, conversational inference through a custom 'emy' Ollama model, and text-to-speech via macOS 'say' converted through ffmpeg. Getting there meant solving real embedded constraints — I2S pin conflicts, stack overflows from variable-length arrays, and heap exhaustion from large allocations, resolved by streaming PCM directly instead of buffering it, plus careful DMA buffer tuning. Phase 3 extends the emotion_detector.py and facial_analyzer.py logic from Phases 1 and 2 toward full-body posture analysis, so the robot's gestures are informed by the same combined-risk pipeline that powers the web and multimodal versions.",
     features: [
       'ESP32 firmware in Arduino C++: wake-word detection, voice activity detection (VAD), servo gesture control, OLED facial expressions (~12 eye states)',
